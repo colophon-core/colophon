@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Block explorer — Colophon (CLPH)</title>
+<meta name="description" content="Colophon (CLPH) block explorer — network statistics, latest blocks, emission schedule and search.">
+<link rel="icon" type="image/x-icon" href="../colophon.ico">
+<style>
+  :root{
+    --bg:#0e1116; --panel:#151a22; --panel2:#1d2430; --line:#2b3442;
+    --paper:#f6eeda; --brass:#d9a441; --brass-dk:#9a6f22;
+    --ink:#1c2230; --text:#dde3ec; --muted:#8b97a8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.7}
+  a{color:var(--brass);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+  header{background:rgba(14,17,22,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;gap:12px;padding:14px 0}
+  .bar img{width:30px;height:30px}
+  .bar .word{font-weight:900;letter-spacing:7px;font-size:18px;color:var(--paper)}
+  nav{margin-left:auto;display:flex;gap:24px;font-weight:600;font-size:15px}
+  nav a{color:var(--muted)} nav a:hover{color:var(--brass);text-decoration:none}
+  .crumb{margin:24px 0 6px;color:var(--muted);font-size:13px}
+  .crumb a{color:var(--muted)}
+  h1{font-size:32px;color:var(--paper);letter-spacing:2px;margin-bottom:6px}
+  .lead{color:var(--muted);margin-bottom:24px}
+  .search{display:flex;gap:10px;margin-bottom:26px}
+  .search input{flex:1;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:13px 16px;border-radius:5px;font-size:15px;font-family:Consolas,monospace}
+  .search input:focus{outline:none;border-color:var(--brass)}
+  .search button{background:linear-gradient(180deg,var(--brass),var(--brass-dk));color:#1a1408;font-weight:800;padding:13px 26px;border:none;border-radius:5px;cursor:pointer;font-size:15px}
+  #result{color:var(--muted);margin-bottom:20px;font-size:14px}
+  .rules{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+  .stats{display:flex;flex-wrap:wrap;justify-content:center;padding:24px 0}
+  .stat{padding:6px 26px;text-align:center;flex:1 1 150px;border-left:1px solid var(--line)}
+  .stat:first-child{border-left:0}
+  .stat .n{font-size:22px;font-weight:800;color:var(--paper);font-family:Consolas,monospace}
+  .stat .l{font-size:11px;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase;margin-top:3px}
+  section{margin:42px 0}
+  h2{font-size:21px;color:var(--paper);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+  h2::before{content:"◈ ";color:var(--brass)}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+  td.num{font-family:Consolas,monospace;color:var(--paper)}
+  th{background:var(--panel2);color:var(--brass);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:11.5px}
+  tr:last-child td{border-bottom:none}
+  .note{background:var(--panel);border:1px dashed var(--line);border-left:3px solid var(--brass);border-radius:6px;padding:15px 18px;font-size:14px;color:var(--muted);margin-top:22px}
+  footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <img src="../colophon.ico" alt="Colophon logo">
+  <div class="word">COLOPHON</div>
+  <nav>
+    <a href="../">Home</a>
+    <a href="../downloads/">Downloads</a>
+    <a href="./">Explorer</a>
+    <a href="https://github.com/ghylll-core/colophon">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+  <div class="crumb"><a href="../">Home</a> · Block explorer</div>
+  <h1>Block explorer</h1>
+  <p class="lead">Network statistics, the emission schedule and the latest blocks — plus a search by block, transaction or address.</p>
+
+  <div class="search">
+    <input id="q" type="text" placeholder="Block height, transaction id or address…">
+    <button onclick="document.getElementById('result').innerHTML='Search becomes available when the network is live. It will be announced on this page.'">Search</button>
+  </div>
+  <div id="result"></div>
+
+  <div class="rules">
+    <div class="wrap stats">
+      <div class="stat"><div class="n">—</div><div class="l">Block height</div></div>
+      <div class="stat"><div class="n">—</div><div class="l">Network hashrate</div></div>
+      <div class="stat"><div class="n">115 s</div><div class="l">Block time</div></div>
+      <div class="stat"><div class="n">28 CLPH</div><div class="l">Block emission</div></div>
+      <div class="stat"><div class="n">0 / 0</div><div class="l">Premine / ICO</div></div>
+      <div class="stat"><div class="n">28,210,000</div><div class="l">Max supply</div></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Latest blocks</h2>
+    <table>
+      <tr><th>Height</th><th>Timestamp</th><th>Emission</th><th>Difficulty</th></tr>
+      <tr><td class="num">—</td><td>—</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td class="num">—</td><td>—</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td class="num">—</td><td>—</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td class="num">—</td><td>—</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td class="num">—</td><td>—</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td class="num">—</td><td>—</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td class="num">—</td><td>—</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td class="num">—</td><td>—</td><td class="num">—</td><td class="num">—</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Network</h2>
+    <table>
+      <tr><th>Parameter</th><th>Value</th></tr>
+      <tr><td>Algorithm</td><td class="num">KawPow (GPU, ASIC-resistant)</td></tr>
+      <tr><td>Consensus</td><td class="num">Proof-of-Work, retarget every block</td></tr>
+      <tr><td>Block time</td><td class="num">115 seconds</td></tr>
+      <tr><td>Block emission</td><td class="num">28 CLPH</td></tr>
+      <tr><td>Halving</td><td class="num">every 520,000 blocks (≈ 1.90 years)</td></tr>
+      <tr><td>Maximum supply</td><td class="num">28,210,000 CLPH</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Emission schedule</h2>
+    <table>
+      <tr><th>Edition</th><th>Blocks</th><th>Emission</th><th>Minted</th></tr>
+      <tr><td class="num">1</td><td class="num">0 – 519,999</td><td class="num">28 CLPH</td><td class="num">14,560,000 CLPH</td></tr>
+      <tr><td class="num">2</td><td class="num">520,000 – 1,039,999</td><td class="num">14 CLPH</td><td class="num">7,280,000 CLPH</td></tr>
+      <tr><td class="num">3</td><td class="num">1,040,000 – 1,559,999</td><td class="num">7 CLPH</td><td class="num">3,640,000 CLPH</td></tr>
+      <tr><td class="num">4</td><td class="num">1,560,000 – 2,079,999</td><td class="num">3.5 CLPH</td><td class="num">1,820,000 CLPH</td></tr>
+      <tr><td class="num">5</td><td class="num">2,080,000 – 2,599,999</td><td class="num">1.75 CLPH</td><td class="num">910,000 CLPH</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Roadmap</h2>
+    <table>
+      <tr><th>Milestone</th><th>Status</th></tr>
+      <tr><td>Windows wallet v0.1.0</td><td class="num">Released</td></tr>
+      <tr><td>Linux wallet</td><td class="num">In progress</td></tr>
+      <tr><td>Block explorer live data</td><td class="num">Planned — announced here when ready</td></tr>
+      <tr><td>Public pool list</td><td class="num">Planned</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>API</h2>
+    <p style="color:var(--muted)">A public read-only API will be published on this page when the network is live. It will expose blocks, transactions, difficulty and supply so that tools and third-party services can query the chain directly.</p>
+  </section>
+
+  <div class="note">The consensus layer is under active development. This page publishes only what is actually released — nothing is advertised before it exists.</div>
+</div>
+
+<footer>
+  <div class="wrap">Colophon (CLPH) — experimental open-source software. Official channels: <a href="https://ghylll-core.github.io/colophon/">website</a> and <a href="https://github.com/ghylll-core/colophon">GitHub</a>.</div>
+</footer>
+</body>
+</html>

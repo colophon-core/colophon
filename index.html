@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colophon (CLPH) — every block carries its printer's mark</title>
+<meta name="description" content="Colophon (CLPH) is a fair-launch KawPow GPU coin. No premine. The ledger is a print shop: every block carries its printer's mark, nothing is printed off-record.">
+<link rel="icon" type="image/x-icon" href="colophon.ico">
+<style>
+  :root{
+    --bg:#0e1116; --panel:#151a22; --panel2:#1d2430; --line:#2b3442;
+    --paper:#f6eeda; --brass:#d9a441; --brass-dk:#9a6f22;
+    --ink:#1c2230; --ink-soft:#38415a; --text:#dde3ec; --muted:#8b97a8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.7}
+  a{color:var(--brass);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px}
+  header{background:rgba(14,17,22,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;gap:12px;padding:14px 0}
+  .bar img{width:30px;height:30px}
+  .bar .word{font-weight:900;letter-spacing:7px;font-size:18px;color:var(--paper)}
+  nav{margin-left:auto;display:flex;gap:24px;font-weight:600;font-size:15px}
+  nav a{color:var(--muted)} nav a:hover{color:var(--brass);text-decoration:none}
+
+  /* --- printing-press hero --- */
+  .hero{text-align:center;padding:72px 0 20px}
+  .hero img{width:132px;height:132px;filter:drop-shadow(0 14px 30px rgba(0,0,0,.5))}
+  .hero h1{font-size:58px;letter-spacing:18px;font-weight:900;color:var(--paper);margin:18px 0 4px;font-family:Georgia,"Times New Roman",serif;text-shadow:0 6px 22px rgba(0,0,0,.6)}
+  .hero .tag{font-size:20px;color:var(--brass);font-style:italic;margin-bottom:8px}
+  .hero .sub{color:var(--muted);font-size:15px;max-width:660px;margin:0 auto 26px}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{background:linear-gradient(180deg,var(--brass),var(--brass-dk));color:#1a1408;font-weight:800;padding:13px 28px;border-radius:4px;font-size:15px}
+  .btn:hover{text-decoration:none;filter:brightness(1.08)}
+  .btn.alt{background:transparent;color:var(--paper);border:1px solid var(--brass)}
+
+  /* --- rule band --- */
+  .rules{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+  .stats{display:flex;flex-wrap:wrap;justify-content:center;padding:26px 0}
+  .stat{padding:6px 30px;text-align:center;flex:1 1 150px;border-left:1px solid var(--line)}
+  .stat:first-child{border-left:0}
+  .stat .n{font-size:23px;font-weight:800;color:var(--paper);font-family:Consolas,monospace}
+  .stat .l{font-size:11px;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase;margin-top:3px}
+
+  section{margin:54px 0}
+  h2{font-size:23px;color:var(--paper);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;font-weight:800}
+  h2::before{content:"◈ ";color:var(--brass)}
+  p.lead{color:var(--muted);font-size:16px;max-width:820px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
+  .cell{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--brass);border-radius:6px;padding:20px}
+  .cell h3{color:var(--brass);font-size:16px;margin-bottom:8px}
+  .cell p{color:var(--muted);font-size:14px}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:16px}
+  th,td{padding:11px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:14.5px}
+  td.num{font-family:Consolas,monospace;color:var(--paper)}
+  th{background:var(--panel2);color:var(--brass);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:12px}
+  tr:last-child td{border-bottom:none}
+  .note{background:var(--panel);border:1px dashed var(--line);border-left:3px solid var(--brass);border-radius:6px;padding:15px 18px;font-size:14px;color:var(--muted);margin-top:22px}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:28px 0 44px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <img src="colophon.ico" alt="Colophon logo">
+  <div class="word">COLOPHON</div>
+  <nav>
+    <a href="./">Home</a>
+    <a href="downloads/">Downloads</a>
+    <a href="explorer/">Explorer</a>
+    <a href="https://github.com/ghylll-core/colophon">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="hero">
+  <img src="colophon.ico" alt="Colophon type-block emblem">
+  <h1>COLOPHON</h1>
+  <div class="tag">Every block carries its printer's mark.</div>
+  <p class="sub">In the old printing shops, the last page of a book carried a small closing note — the colophon — naming the printer, the date and the place. Colophon is a fair-launch KawPow coin built on the same habit: a public ledger where every block ends with a mark anyone can read, and nothing is printed off-record.</p>
+  <div class="cta">
+    <a class="btn" href="downloads/">Download the wallet</a>
+    <a class="btn alt" href="explorer/">Open the explorer</a>
+  </div>
+</div>
+
+<div class="rules">
+  <div class="wrap stats">
+    <div class="stat"><div class="n">115 s</div><div class="l">Block time</div></div>
+    <div class="stat"><div class="n">28 CLPH</div><div class="l">Block emission</div></div>
+    <div class="stat"><div class="n">28,210,000</div><div class="l">Max supply</div></div>
+    <div class="stat"><div class="n">0 / 0</div><div class="l">Premine / ICO</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <h2>The colophon</h2>
+    <p class="lead">A printed page can be read from start to finish, and the colophon at the end tells you who set it. Colophon applies that discipline to money — the chain is the print run, and every block is a page set in public view.</p>
+    <div class="grid">
+      <div class="cell"><h3>Fair from the first block</h3><p>No premine, no ICO, no founder allocation. The first CLPH is mined like the last one. Nobody gets a head start.</p></div>
+      <div class="cell"><h3>GPU-minable</h3><p>KawPow, ASIC-resistant by design. Ordinary graphics cards can take part — the network is for many hands, not a few warehouses.</p></div>
+      <div class="cell"><h3>Verifiable, not promised</h3><p>Open source under MIT. Every number below is a rule of the chain, not a road-map wish.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The press</h2>
+    <table>
+      <tr><th>Parameter</th><th>Value</th></tr>
+      <tr><td>Name / ticker</td><td class="num">Colophon / CLPH</td></tr>
+      <tr><td>Algorithm</td><td class="num">KawPow (GPU, ASIC-resistant)</td></tr>
+      <tr><td>Consensus</td><td class="num">Proof-of-Work</td></tr>
+      <tr><td>Block time</td><td class="num">115 seconds</td></tr>
+      <tr><td>Block emission</td><td class="num">28 CLPH</td></tr>
+      <tr><td>Halving</td><td class="num">every 520,000 blocks (≈ 1.90 years)</td></tr>
+      <tr><td>Maximum supply</td><td class="num">28,210,000 CLPH</td></tr>
+      <tr><td>Premine / ICO</td><td class="num">0 / 0</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>The editions</h2>
+    <p class="lead">The supply is issued in editions, and each new edition is half the size of the one before it. The schedule is a function of block height, not anyone's decision.</p>
+    <table>
+      <tr><th>Edition</th><th>Blocks</th><th>Emission</th><th>Total</th></tr>
+      <tr><td class="num">1</td><td class="num">0 – 519,999</td><td class="num">28 CLPH</td><td class="num">14,560,000</td></tr>
+      <tr><td class="num">2</td><td class="num">520,000 – 1,039,999</td><td class="num">14 CLPH</td><td class="num">7,280,000</td></tr>
+      <tr><td class="num">3</td><td class="num">1,040,000 – 1,559,999</td><td class="num">7 CLPH</td><td class="num">3,640,000</td></tr>
+      <tr><td class="num">4</td><td class="num">1,560,000 – 2,079,999</td><td class="num">3.5 CLPH</td><td class="num">1,820,000</td></tr>
+      <tr><td class="num">5</td><td class="num">2,080,000 – 2,599,999</td><td class="num">1.75 CLPH</td><td class="num">910,000</td></tr>
+    </table>
+    <p class="note">Emission keeps halving beyond edition 5 and settles toward the cap of 28,210,000 CLPH without ever passing it.</p>
+  </section>
+
+  <section>
+    <h2>Setting up the shop</h2>
+    <div class="grid">
+      <div class="cell"><h3>Wallet</h3><p>Windows v0.1.0 is released. See the SHA-256 and verify the archive before you run it.</p><p style="margin-top:10px"><a href="downloads/">Downloads →</a></p></div>
+      <div class="cell"><h3>Mining</h3><p>KawPow works with common NVIDIA and AMD cards. Pools and solo setup are covered in the docs.</p><p style="margin-top:10px"><a href="https://github.com/ghylll-core/colophon/blob/main/docs/mining.md">Mining guide →</a></p></div>
+      <div class="cell"><h3>Explorer</h3><p>Statistics, the emission schedule and the latest blocks — nothing is shown before it exists.</p><p style="margin-top:10px"><a href="explorer/">Explorer →</a></p></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">Colophon (CLPH) — experimental open-source software. Official channels: <a href="https://ghylll-core.github.io/colophon/">website</a> and <a href="https://github.com/ghylll-core/colophon">GitHub</a>. <a href="https://github.com/ghylll-core/colophon/blob/main/WHITEPAPER.md">Whitepaper</a> · <a href="https://github.com/ghylll-core/colophon/blob/main/docs/transparency.md">Transparency</a></div>
+</footer>
+</body>
+</html>

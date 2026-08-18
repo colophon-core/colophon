@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Downloads — Colophon (CLPH)</title>
+<meta name="description" content="Colophon (CLPH) wallet downloads — Windows v0.1.0 released, Linux in progress.">
+<link rel="icon" type="image/x-icon" href="../colophon.ico">
+<style>
+  :root{
+    --bg:#0e1116; --panel:#151a22; --panel2:#1d2430; --line:#2b3442;
+    --paper:#f6eeda; --brass:#d9a441; --brass-dk:#9a6f22;
+    --ink:#1c2230; --text:#dde3ec; --muted:#8b97a8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.7}
+  a{color:var(--brass);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
+  header{background:rgba(14,17,22,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;gap:12px;padding:14px 0}
+  .bar img{width:30px;height:30px}
+  .bar .word{font-weight:900;letter-spacing:7px;font-size:18px;color:var(--paper)}
+  nav{margin-left:auto;display:flex;gap:24px;font-weight:600;font-size:15px}
+  nav a{color:var(--muted)} nav a:hover{color:var(--brass);text-decoration:none}
+  .crumb{margin:24px 0 6px;color:var(--muted);font-size:13px}
+  .crumb a{color:var(--muted)}
+  h1{font-size:30px;color:var(--paper);letter-spacing:2px;margin-bottom:6px}
+  .lead{color:var(--muted);margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .cell{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--brass);border-radius:7px;padding:22px}
+  .cell h3{color:var(--brass);font-size:17px;margin-bottom:4px}
+  .cell .st{font-size:12px;color:var(--paper);letter-spacing:1.4px;text-transform:uppercase;margin-bottom:10px}
+  .cell p{color:var(--muted);font-size:14px;margin-bottom:14px}
+  .btn{display:inline-block;background:linear-gradient(180deg,var(--brass),var(--brass-dk));color:#1a1408;font-weight:800;padding:11px 24px;border-radius:4px;font-size:14px}
+  .btn:hover{text-decoration:none;filter:brightness(1.08)}
+  .btn.soon{background:transparent;color:var(--muted);border:1px solid var(--line);cursor:not-allowed}
+  footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <img src="../colophon.ico" alt="Colophon logo">
+  <div class="word">COLOPHON</div>
+  <nav>
+    <a href="../">Home</a>
+    <a href="./">Downloads</a>
+    <a href="../explorer/">Explorer</a>
+    <a href="https://github.com/ghylll-core/colophon">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+  <div class="crumb"><a href="../">Home</a> · Downloads</div>
+  <h1>Downloads</h1>
+  <p class="lead">The wallet is the official way to hold CLPH and to take part in the network. Every archive is published with its SHA-256 checksum — compare it before running anything.</p>
+
+  <div class="grid">
+    <div class="cell">
+      <h3>Windows wallet</h3>
+      <div class="st">Released · v0.1.0</div>
+      <p>Desktop wallet for Windows 10/11 (64-bit). Includes checksum and a step-by-step verification guide.</p>
+      <a class="btn" href="windows/">Download →</a>
+    </div>
+    <div class="cell">
+      <h3>Linux wallet</h3>
+      <div class="st">In progress</div>
+      <p>Being set. Will be announced here with its own checksum when the build is ready.</p>
+      <span class="btn soon">Coming soon</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">Colophon (CLPH) — experimental open-source software. Official channels: <a href="https://ghylll-core.github.io/colophon/">website</a> and <a href="https://github.com/ghylll-core/colophon">GitHub</a>.</div>
+</footer>
+</body>
+</html>
