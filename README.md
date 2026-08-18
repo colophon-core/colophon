@@ -36,9 +36,9 @@ anyone's decision.
 
 ## Links
 
-- Website: https://ghylll-core.github.io/colophon/
-- Downloads: https://ghylll-core.github.io/colophon/downloads/
-- Explorer: https://ghylll-core.github.io/colophon/explorer/
+- Website: https://colophon-core.github.io/colophon/
+- Downloads: https://colophon-core.github.io/colophon/downloads/
+- Explorer: https://colophon-core.github.io/colophon/explorer/
 - Docs: [`docs/`](docs/)
 
 ## Release
