@@ -44,7 +44,7 @@ anyone's decision.
 ## Release
 
 - Windows wallet v0.1.0 — `colophon-wallet-windows-0.1.0.zip`
-- SHA-256: `{SHA256}`
+- SHA-256: `8581a4ddf1c3f35ed62d6d422949eda0ea26def9b5d5df71c537171e46c2f85b`
 
 ## Repository layout
 
